@@ -22,10 +22,14 @@
  *them along with the name, gross salaray, and net salary for each worker.
  *Create a test class to thoroughly test your project.
  */
-//import java.util.*;
 public abstract class Employee implements Employable
 {
 	private String name;
+	
+	public Employee(String a)
+	{
+		name = a;
+	}
 	
 	public String getName()
 	{

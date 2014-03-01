@@ -1,9 +1,11 @@
 
 public class Manager extends Employee
 {
-	private int salary;
-	public Manager(int x)
+	private double salary;
+	
+	public Manager(int x, String N)
 	{
+		super(N);
 		salary = x;
 	}
 	@Override

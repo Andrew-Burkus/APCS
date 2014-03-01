@@ -6,24 +6,25 @@
  */
 public class HourlyWorker extends Employee 
 {
-	private int hourlywage,
-				hoursworked;
-	public HourlyWorker(int hours, int wage)
+	protected double hourlywage; //protected so don't have to be redefined in parttime class
+	protected double hoursworked;
+	
+	public HourlyWorker(int hours, int wage, String N)
 	{
+		super(N);
 		hourlywage = wage;
 		hoursworked = hours;
 	}
 	@Override
 	public double grossSalary() 
-	{
+	{		
 		return hourlywage * hoursworked;
 	}
 
 	@Override
 	public double netSalary() 
 	{
-		// TODO Auto-generated method stub
-		return (hourlywage * hoursworked) - (hourlywage * hoursworked * 0.95);
+		return grossSalary() - grossSalary() * 0.95;
 	}
 
 }
