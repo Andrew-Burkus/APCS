@@ -7,7 +7,7 @@ public class MosquitoEgg extends Actor {
   
   public void act() {
     if(lifespan == 6) {
-      Mosquito mos = new Mosquito(Color.BLUE);
+      Mosquito mos = new Mosquito();
       mos.putSelfInGrid(getGrid(), getLocation());
       removeSelfFromGrid();
     }
