@@ -9,7 +9,17 @@ public class Mosquito extends Critter {
   }
   
   public void processActors(ArrayList<Actors> actors) {
-    
+    if(lifespan  >= 6) {
+      if(cowbitten) {
+        MosquitoEgg egg = new MosquitoEgg();
+        egg.putSelfInGrid(getGrid(), getLocation());
+        removeSelfFromGrid();
+        return;
+      } else {
+        removeSelfFromGrid();
+        return;
+      }
+    }
     lifespan ++;
   }
   
@@ -33,6 +43,8 @@ public class Mosquito extends Critter {
   
    public void makeMove(Location loc) {
         setDirection(getLocation().getDirectionToward(loc));
+        if(loc != null)
+          cowbitten = true;
         super.makeMove(loc);
     }
   
