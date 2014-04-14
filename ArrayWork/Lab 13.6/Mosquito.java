@@ -2,6 +2,7 @@ public class Mosquito extends Critter {
   private int lifespan;
   boolean cowbitten;
   
+  public Mosquito () { super(Color.BLUE) }
   public Mosquito(Color color) {
     super(color);
     lifespan = 0;
