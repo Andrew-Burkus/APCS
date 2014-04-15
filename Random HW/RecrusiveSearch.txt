@@ -1,0 +1,32 @@
+public class recursivesearch {
+	public static int search(int [] a, int from, int to, int target) 
+	{
+		if(from >= to) {
+			if(a[from] == target) 
+				return from;
+			if(a[to] == target) 
+				return to;
+			return -1;
+		}
+		
+		else {
+			int middle = (from + to) / 2;
+			int f = search(a, from, middle, target);
+			if(f == -1)
+				return search(a, middle + 1, to, target);
+			else
+				return f;
+			}
+		}
+	
+		
+		
+		
+	 public static void main(String[] args) {
+		int [] array = { 1, 4, 5, 2, 9, 0, 10, 52, 23, 45, 73, 20, 91};
+
+		System.out.println(search(array, 0, array.length, ));
+	}
+
+}
+
