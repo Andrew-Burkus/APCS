@@ -14,9 +14,9 @@ public class CommisionWorker extends Employee
 	public CommisionWorker(double salary, double sales, double commision, String N)
 	{
 		super(N);
-		salary = salary;
-		sales = sales;
-		commision = commision;
+		this.salary = salary;
+		this.sales = sales;
+		this.commision = commision;
 	}
 
 	@Override
